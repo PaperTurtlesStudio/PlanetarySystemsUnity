@@ -38,13 +38,15 @@ public class PlayerMovement : MonoBehaviour
         PlayerModel.position = gameObject.transform.position;
         PlayerController.Move(move * PlayerSpeed * Time.deltaTime);
 
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (BCanJump)
+            {
+                Velocity.y = Mathf.Sqrt(JumpHeight * -2.0f * Gravity);
+            }
+        }
 
-
-
-
-
-
-
-
+        Velocity.y += Gravity * Time.deltaTime;
+        PlayerController.Move(Velocity * Time.deltaTime);
     }
 }
