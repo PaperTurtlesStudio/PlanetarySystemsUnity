@@ -699,8 +699,9 @@ GameObject:
   - component: {fileID: 670438917}
   - component: {fileID: 670438916}
   - component: {fileID: 670438915}
+  - component: {fileID: 670438919}
   m_Layer: 0
-  m_Name: Sphere (1)
+  m_Name: PlanetBlocking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -782,6 +783,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &670438919
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670438914}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &816564293
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,6 +807,7 @@ GameObject:
   - component: {fileID: 816564294}
   - component: {fileID: 816564295}
   - component: {fileID: 816564296}
+  - component: {fileID: 816564297}
   m_Layer: 0
   m_Name: PlayerSpaceship
   m_TagString: Untagged
@@ -846,11 +861,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe208b0e56dc694992841e1460b1f86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForwardSpeed: 100
+  ForwardSpeed: 75
   StrafeSpeed: 7.5
   HoverSpeed: 5
-  MouseSensitivity: 90
+  MouseSensitivity: 45
   RollSpeed: 90
+--- !u!114 &816564297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816564293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a272743b2388c4c89a728085523a10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spaceship: {fileID: 816564296}
 --- !u!1 &1097378853
 GameObject:
   m_ObjectHideFlags: 0
