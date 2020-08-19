@@ -9,6 +9,7 @@ public class SpaceshipController : MonoBehaviour
     public float HoverSpeed = 5.0f;
     public float MouseSensitivity = 90.0f;
     public float RollSpeed = 90.0f;
+    public float InitialSpeed = 1.0f;
 
     private float ActiveForwardSpeed;
     private float ActiveStrafeSpeed;
@@ -50,9 +51,9 @@ public class SpaceshipController : MonoBehaviour
 
         transform.Rotate(-MouseDistance.y * MouseSensitivity * Time.deltaTime, MouseDistance.x * MouseSensitivity * Time.deltaTime, Roll * RollSpeed * Time.deltaTime, Space.Self);
 
-        ActiveForwardSpeed = Mathf.Lerp(ActiveForwardSpeed, Input.GetAxisRaw("Vertical") * ForwardSpeed, ForwardAcceleration * Time.deltaTime);
-        ActiveStrafeSpeed = Mathf.Lerp(ActiveStrafeSpeed, Input.GetAxisRaw("Horizontal") * StrafeSpeed, StrafeAcceleration * Time.deltaTime);
-        ActiveHoverSpeed = Mathf.Lerp(ActiveHoverSpeed, Input.GetAxisRaw("Hover") * HoverSpeed, HoverAcceleration * Time.deltaTime);
+        ActiveForwardSpeed = Mathf.Lerp(ActiveForwardSpeed, (Input.GetAxisRaw("Vertical") + InitialSpeed) * ForwardSpeed, ForwardAcceleration * Time.deltaTime);
+        ActiveStrafeSpeed = Mathf.Lerp(ActiveStrafeSpeed, (Input.GetAxisRaw("Horizontal") + InitialSpeed) * StrafeSpeed, StrafeAcceleration * Time.deltaTime);
+        ActiveHoverSpeed = Mathf.Lerp(ActiveHoverSpeed, (Input.GetAxisRaw("Hover") + InitialSpeed) * HoverSpeed, HoverAcceleration * Time.deltaTime);
 
         transform.position += transform.forward * ActiveForwardSpeed * Time.deltaTime;
         transform.position += transform.right * ActiveStrafeSpeed * Time.deltaTime;
