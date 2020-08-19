@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpaceshipController : MonoBehaviour
 {
+    public GameObject SpaceshipModel;
+    public Image SpaceshipFirstPerson;
+    public Transform SpaceshipCamera;
+
     public float ForwardSpeed = 25.0f;
     public float StrafeSpeed = 7.5f;
     public float HoverSpeed = 5.0f;
@@ -22,6 +27,7 @@ public class SpaceshipController : MonoBehaviour
     private Vector2 MouseDistance;
     private float Roll;
     private float RollAcceleration = 3.5f;
+    private bool BThirdPerson = true;
 
 
 
@@ -38,6 +44,37 @@ public class SpaceshipController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        SpaceshipMovement();
+
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            if (BThirdPerson)
+            {
+                SpaceshipFirstPerson.gameObject.SetActive(false);
+                SpaceshipModel.SetActive(true);
+
+                SpaceshipCamera.localPosition = new Vector3(0.0f, 13.0f, -30.0f);
+                SpaceshipCamera.localRotation = Quaternion.Euler(11.0f, 0.0f, 0.0f);
+
+                BThirdPerson = false;
+            }
+            else
+            {
+                SpaceshipFirstPerson.gameObject.SetActive(true);
+                SpaceshipModel.SetActive(false);
+
+                SpaceshipCamera.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
+                SpaceshipCamera.localRotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
+
+                BThirdPerson = true;
+            }
+        }
+        
+    }
+
+    void SpaceshipMovement()
     {
         MouseLook.x = Input.mousePosition.x;
         MouseLook.y = Input.mousePosition.y;
@@ -59,4 +96,6 @@ public class SpaceshipController : MonoBehaviour
         transform.position += transform.right * ActiveStrafeSpeed * Time.deltaTime;
         transform.position += transform.up * ActiveHoverSpeed * Time.deltaTime;
     }
+
+
 }
