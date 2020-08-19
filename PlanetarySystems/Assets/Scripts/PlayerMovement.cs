@@ -21,44 +21,56 @@ public class PlayerMovement : MonoBehaviour
     Vector3 Velocity;
     bool BIsGrounded;
     bool BCanJump;
-    Vector3 CrouchCamera = new Vector3(0f, 1.2f, 0.35f);
-    Vector3 IdleCamera = new Vector3(0f, 1.5f, 0f);
+    bool BThirdPerson = false;
+    Vector3 FirstPersonCrouchCamera = new Vector3(0f, 1.2f, 0.35f);
+    Vector3 ThirdPersonCrouchCamera = new Vector3(0.0f, 1.5f, -1.35f);
+    Vector3 FirstPersonCamera = new Vector3(0f, 1.5f, 0f);
+    Vector3 ThirdPersonCamera = new Vector3(0.0f, 1.8f, -1.0f);
 
     // Update is called once per frame
     void Update()
     {
-        BIsGrounded = Physics.CheckSphere(GroundCheck.position, GroundDistance, GroundMask);
+        PlayerMove();
+        CameraPOV();
+        CrouchControl();
+        WalkingControl();
+        Jump();
+    }
 
-        if (BIsGrounded) { BCanJump = true; }
-
-        if(BIsGrounded && Velocity.y < 0) { Velocity.y = -2.0f; }
-
+    void PlayerMove()
+    {
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = (transform.right * x) + (transform.forward * z);
         PlayerModel.position = gameObject.transform.position;
         PlayerController.Move(move * PlayerSpeed * Time.deltaTime);
+    }
 
-        if (Input.GetKey(KeyCode.LeftControl))
+    void CameraPOV()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
         {
-            Animator.SetBool("BIsCrouch", true);
-            PlayerCamera.localPosition = Vector3.Lerp(PlayerCamera.localPosition, CrouchCamera, 5.0f * Time.deltaTime);
+            if (BThirdPerson)
+            {
+                PlayerCamera.localPosition = Vector3.Lerp(PlayerCamera.localPosition, ThirdPersonCamera, 5.0f);
+                BThirdPerson = false;
+            }
+            else
+            {
+                PlayerCamera.localPosition = Vector3.Lerp(PlayerCamera.localPosition, FirstPersonCamera, 5.0f);
+                BThirdPerson = true;
+            }
         }
-        else
-        {
-            Animator.SetBool("BIsCrouch", false);
-            PlayerCamera.localPosition = Vector3.Lerp(PlayerCamera.localPosition, IdleCamera, 5.0f * Time.deltaTime);
-        }
+    }
 
-        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
-        {
-            Animator.SetBool("BIsWalking", true);
-        }
-        else
-        {
-            Animator.SetBool("BIsWalking", false);
-        }
+    void Jump()
+    {
+        BIsGrounded = Physics.CheckSphere(GroundCheck.position, GroundDistance, GroundMask);
+
+        if (BIsGrounded) { BCanJump = true; }
+
+        if (BIsGrounded && Velocity.y < 0) { Velocity.y = -2.0f; }
 
         if (Input.GetButtonDown("Jump"))
         {
@@ -70,5 +82,49 @@ public class PlayerMovement : MonoBehaviour
 
         Velocity.y += Gravity * Time.deltaTime;
         PlayerController.Move(Velocity * Time.deltaTime);
+    }
+
+    void CrouchControl()
+    {
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            Animator.SetBool("BIsCrouch", true);
+
+            if (BThirdPerson)
+            {
+                PlayerCamera.localPosition = Vector3.Lerp(PlayerCamera.localPosition, ThirdPersonCrouchCamera, 5.0f * Time.deltaTime);
+            }
+            else
+            {
+                PlayerCamera.localPosition = Vector3.Lerp(PlayerCamera.localPosition, FirstPersonCrouchCamera, 5.0f * Time.deltaTime);
+            }
+
+            //Add in here for when character is moving
+        }
+        else
+        {
+            Animator.SetBool("BIsCrouch", false);
+            if (BThirdPerson)
+            {
+                PlayerCamera.localPosition = Vector3.Lerp(PlayerCamera.localPosition, ThirdPersonCamera, 5.0f * Time.deltaTime);
+            }
+            else
+            {
+                PlayerCamera.localPosition = Vector3.Lerp(PlayerCamera.localPosition, FirstPersonCamera, 5.0f * Time.deltaTime);
+            }
+        }
+    }
+
+    void WalkingControl()
+    {
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        {
+            Animator.SetBool("BIsWalking", true);
+            //Add in Running Control right here
+        }
+        else
+        {
+            Animator.SetBool("BIsWalking", false);
+        }
     }
 }
