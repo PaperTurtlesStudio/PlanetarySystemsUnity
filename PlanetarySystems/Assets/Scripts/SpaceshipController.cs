@@ -35,7 +35,7 @@ public class SpaceshipController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Confined;
+        //Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
 
         ScreenCenter.x = Screen.width * 0.5f;
