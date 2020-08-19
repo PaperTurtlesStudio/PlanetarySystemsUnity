@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     Vector3 Velocity;
     bool BIsGrounded;
     bool BCanJump;
+    Vector3 CrouchCamera = new Vector3(0f, 1.2f, 0.35f);
+    Vector3 IdleCamera = new Vector3(0f, 1.5f, 0f);
 
     // Update is called once per frame
     void Update()
@@ -37,6 +39,26 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = (transform.right * x) + (transform.forward * z);
         PlayerModel.position = gameObject.transform.position;
         PlayerController.Move(move * PlayerSpeed * Time.deltaTime);
+
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            Animator.SetBool("BIsCrouch", true);
+            PlayerCamera.localPosition = Vector3.Lerp(PlayerCamera.localPosition, CrouchCamera, 5.0f * Time.deltaTime);
+        }
+        else
+        {
+            Animator.SetBool("BIsCrouch", false);
+            PlayerCamera.localPosition = Vector3.Lerp(PlayerCamera.localPosition, IdleCamera, 5.0f * Time.deltaTime);
+        }
+
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        {
+            Animator.SetBool("BIsWalking", true);
+        }
+        else
+        {
+            Animator.SetBool("BIsWalking", false);
+        }
 
         if (Input.GetButtonDown("Jump"))
         {
