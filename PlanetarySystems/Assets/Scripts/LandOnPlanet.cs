@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LandOnPlanet : MonoBehaviour
 {
-    public SpaceshipController Spaceship;
+    public Spaceship_MovementController Spaceship;
 
     private bool BLanding = false;
     private string LandingPlanet;

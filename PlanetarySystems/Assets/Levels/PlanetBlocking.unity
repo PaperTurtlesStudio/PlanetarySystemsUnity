@@ -589,7 +589,9 @@ MonoBehaviour:
   GroundMask:
     serializedVersion: 2
     m_Bits: 256
-  PlayerSpeed: 4
+  WalkingSpeed: 3
+  RunningSpeed: 6
+  CrouchSpeed: 0.5
   TurnSmoothTime: 0.1
   Gravity: -19.6
   GroundDistance: 0.2
