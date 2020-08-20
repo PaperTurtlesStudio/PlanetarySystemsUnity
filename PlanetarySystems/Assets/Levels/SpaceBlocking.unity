@@ -1105,10 +1105,10 @@ MonoBehaviour:
   SpaceshipModel: {fileID: 902123019}
   SpaceshipFirstPerson: {fileID: 128121744}
   SpaceshipCamera: {fileID: 270901712}
-  ForwardSpeed: 75
+  ForwardSpeed: 125
   StrafeSpeed: 7.5
   HoverSpeed: 5
-  MouseSensitivity: 45
+  MouseSensitivity: 65
   RollSpeed: 90
   InitialSpeed: 1
 --- !u!114 &816564297
