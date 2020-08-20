@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Levels/PlanetBlocking.unity
+    path: Assets/Planets/TestPlanet/L_PlanetBlocking.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Levels/SpaceBlocking.unity
+    path: Assets/Space/Levels/L_SpaceBlocking.unity
     guid: a6d2b963c28efdd41ab5147561a4518c
   m_configObjects: {}
