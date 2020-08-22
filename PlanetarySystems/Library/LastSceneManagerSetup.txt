@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Planets/TestPlanet/L_PlanetBlocking.unity
+- path: Assets/Planets/TestPlanet/L_PlanetBlocking2.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

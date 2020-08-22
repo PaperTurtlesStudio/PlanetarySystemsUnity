@@ -16,9 +16,9 @@ public class ReturnToSpace : MonoBehaviour
 
             SceneManager.LoadScene("L_SpaceBlocking");
         }
-        else
+        else if(Input.GetKey(KeyCode.L))
         {
-            //Tell not close enough to ship to return to space
+               
         }
     }
 }
