@@ -26,6 +26,7 @@ public class ZipComUI : MonoBehaviour
     void Start()
     {
         InventorySetUp();
+        Debug.Log(PlayerPanel.activeInHierarchy);
     }
 
     // Update is called once per frame
@@ -49,21 +50,24 @@ public class ZipComUI : MonoBehaviour
     void DisplayZipCom()
     {
         //input button pressed (Z) display animation then the main screen (That being the player stats one)
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             ZipCom.SetActive(true);
+
 
             PlayerPanel.SetActive(true);
             InventoryPanel.SetActive(false);
             MapPanel.SetActive(false);
             SpaceshipStatsPanel.SetActive(false);
-            PlayerPanel.SetActive(false);
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+
+
+            Debug.Log(PlayerPanel.activeInHierarchy);
         }
         //input button pressed (I) display animation then Inventory Screen
-        if (Input.GetKey(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I))
         {
             ZipCom.SetActive(true);
 
@@ -71,13 +75,12 @@ public class ZipComUI : MonoBehaviour
             InventoryPanel.SetActive(true);
             MapPanel.SetActive(false);
             SpaceshipStatsPanel.SetActive(false);
-            PlayerPanel.SetActive(false);
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
         //input button pressed (M) display animaion then Map Screen 
-        if (Input.GetKey(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.M))
         {
             ZipCom.SetActive(true);
 
@@ -85,7 +88,6 @@ public class ZipComUI : MonoBehaviour
             InventoryPanel.SetActive(false);
             MapPanel.SetActive(true);
             SpaceshipStatsPanel.SetActive(false);
-            PlayerPanel.SetActive(false);
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
