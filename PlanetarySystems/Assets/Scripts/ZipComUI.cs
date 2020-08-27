@@ -16,6 +16,12 @@ public class ZipComUI : MonoBehaviour
     public ZipComInventorySlot[] SpaceshipInventorySlots;
     public ZipComInventorySlot[] PlanetInventorySlots;
 
+    public GameObject PlayerPanel;
+    public GameObject InventoryPanel;
+    public GameObject MapPanel;
+    public GameObject SpaceshipStatsPanel;
+    public GameObject PlanetStatsPanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +52,13 @@ public class ZipComUI : MonoBehaviour
         if (Input.GetKey(KeyCode.Z))
         {
             ZipCom.SetActive(true);
+
+            PlayerPanel.SetActive(true);
+            InventoryPanel.SetActive(false);
+            MapPanel.SetActive(false);
+            SpaceshipStatsPanel.SetActive(false);
+            PlayerPanel.SetActive(false);
+
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
@@ -53,6 +66,13 @@ public class ZipComUI : MonoBehaviour
         if (Input.GetKey(KeyCode.I))
         {
             ZipCom.SetActive(true);
+
+            PlayerPanel.SetActive(false);
+            InventoryPanel.SetActive(true);
+            MapPanel.SetActive(false);
+            SpaceshipStatsPanel.SetActive(false);
+            PlayerPanel.SetActive(false);
+
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
@@ -60,6 +80,13 @@ public class ZipComUI : MonoBehaviour
         if (Input.GetKey(KeyCode.M))
         {
             ZipCom.SetActive(true);
+
+            PlayerPanel.SetActive(false);
+            InventoryPanel.SetActive(false);
+            MapPanel.SetActive(true);
+            SpaceshipStatsPanel.SetActive(false);
+            PlayerPanel.SetActive(false);
+
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
