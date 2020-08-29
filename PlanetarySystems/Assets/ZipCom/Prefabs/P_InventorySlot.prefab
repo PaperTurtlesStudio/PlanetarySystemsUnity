@@ -251,7 +251,6 @@ MonoBehaviour:
   ActiveInventoryIcon: {fileID: 5623682211969970530}
   SelectOverlayIcon: {fileID: 7715480284760465861}
   ItemOptionsText: {fileID: 0}
-  BIsItemSelected: 0
   NameText: {fileID: 2705349551429289825}
 --- !u!114 &2117933358
 MonoBehaviour:
