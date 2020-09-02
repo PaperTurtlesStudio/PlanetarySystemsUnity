@@ -57,7 +57,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 5000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 1000
   playerBody: {fileID: 4110815137026429753}
+  Interactable: {fileID: 0}
 --- !u!1 &4110815137026429702
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,7 +112,7 @@ GameObject:
   - component: {fileID: 4110815137026429752}
   - component: {fileID: 4110815137026429754}
   m_Layer: 0
-  m_Name: PlayerCharacter
+  m_Name: P_PlayerCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
