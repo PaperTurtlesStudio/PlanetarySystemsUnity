@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 613845266}
   - component: {fileID: 613845265}
   - component: {fileID: 613845264}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ Terrain:
   m_TerrainData: {fileID: 15600000, guid: c31e8db938ea868458e554f35e2d5f31, type: 2}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
+  m_TreeCrossFadeLength: 200
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 80
   m_DetailObjectDensity: 1
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 835239191}
   - component: {fileID: 835239190}
   - component: {fileID: 835239189}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain_(0.0, 0.0, -1000.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +332,7 @@ Terrain:
   m_TerrainData: {fileID: 15600000, guid: 4807b37f6f9aa8a4db4835f6f832f78d, type: 2}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
+  m_TreeCrossFadeLength: 200
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 80
   m_DetailObjectDensity: 1
@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 858451930}
   - component: {fileID: 858451929}
   - component: {fileID: 858451928}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain_(-1000.0, 0.0, -1000.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ Terrain:
   m_TerrainData: {fileID: 15600000, guid: eabbdf5337129f84aa716d17735536ca, type: 2}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
+  m_TreeCrossFadeLength: 200
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 80
   m_DetailObjectDensity: 1
@@ -523,7 +523,7 @@ GameObject:
   - component: {fileID: 1024758671}
   - component: {fileID: 1024758670}
   - component: {fileID: 1024758669}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain_(-1000.0, 0.0, 0.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -553,9 +553,9 @@ Terrain:
   m_TerrainData: {fileID: 15600000, guid: 896bc80da67ab1f49bb1d44bec491365, type: 2}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
+  m_TreeCrossFadeLength: 200
   m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 80
+  m_DetailObjectDistance: 250
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
