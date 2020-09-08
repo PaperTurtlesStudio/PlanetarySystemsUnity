@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Planets/L_HomePlanet02.unity
+- path: Assets/Planets/L_HomePlanet03.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
