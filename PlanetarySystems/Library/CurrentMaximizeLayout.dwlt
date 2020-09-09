@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 679, y: 492}
+  m_MinSize: {x: 678, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 17818
+  controlID: 11764
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,10 +136,10 @@ MonoBehaviour:
     y: 0
     width: 1558
     height: 947
-  m_MinSize: {x: 403, y: 492}
+  m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 17819
+  controlID: 11765
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,10 +161,10 @@ MonoBehaviour:
     y: 0
     width: 1558
     height: 676
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 17820
+  controlID: 11727
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,7 +222,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 462bffff10f4ffff18f4fffff64a0000
+      m_ExpandedIDs: 62fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -311,9 +311,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -116.99354, y: 92.97882, z: 1208.853}
+    m_Target: {x: 2374.6858, y: -3398.2192, z: 5947.1655}
     speed: 2
-    m_Value: {x: -116.99354, y: 92.97882, z: 1208.853}
+    m_Value: {x: 2374.6858, y: -3398.2192, z: 5947.1655}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -360,13 +360,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.008399275, y: 0.020400016, z: -0.00006791666, w: -0.9998581}
+    m_Target: {x: -0.30936387, y: -0.12587649, z: 0.041484285, w: -0.94178474}
     speed: 2
-    m_Value: {x: -0.008398423, y: 0.020397946, z: -0.00006790977, w: -0.99975663}
+    m_Value: {x: -0.30932826, y: -0.12586199, z: 0.04147951, w: -0.9416763}
   m_Size:
-    m_Target: 30.729288
+    m_Target: 4171.3667
     speed: 2
-    m_Value: 30.729288
+    m_Value: 4171.3667
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -523,21 +523,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/PlayerCharacter
+    - Assets/Planets/PlanetTerrains/Forest/Textures
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 90
   m_LastFolders:
-  - Assets/PlayerCharacter
+  - Assets/Planets/PlanetTerrains/Forest/Textures
   m_LastFoldersGridSize: 90
   m_LastProjectPath: D:\GitHub\PlanetarySystemsUnity\PlanetarySystems
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 199}
-    m_SelectedIDs: f65e0000
-    m_LastClickedID: 24310
-    m_ExpandedIDs: 00000000e65e0000e85e0000ea5e0000ec5e0000ee5e0000f05e0000f25e0000f45e000000ca9a3b
+    scrollPos: {x: 0, y: 150}
+    m_SelectedIDs: ee380000
+    m_LastClickedID: 14574
+    m_ExpandedIDs: 000000008438000086380000883800008a3800008c3800008e380000903800009238000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -565,7 +565,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e65e0000e85e0000ea5e0000ec5e0000ee5e0000f05e0000f25e0000f45e000000ca9a3b
+    m_ExpandedIDs: 000000008438000086380000883800008a3800008c3800008e380000903800009238000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -590,9 +590,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 4ad2feff
-    m_LastClickedInstanceID: -77238
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: ee360000
+    m_LastClickedInstanceID: 14062
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000e44b000006ad0000904e00000aad000000ad0000004c0000067d0200acae0200deb9020004720200006702005e9300003c610000185d00005a9001006084000062bd0000046e000078710000aa48000076c30600ec3c0000465b00003a5b0000e2cb00002af50000e85b00002c6900003a430000b6690000823700009641000000000000083a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -849,7 +849,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -77256
+  m_LastSelectedObjectID: -1186
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -911,8 +911,8 @@ MonoBehaviour:
     m_CachedPref: -468
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -77238
-  m_LastVerticalScrollValue: 0
+  m_LastInspectedObjectInstanceID: 14062
+  m_LastVerticalScrollValue: 528
   m_AssetGUID: 
   m_InstanceID: 0
   m_LockTracker:
